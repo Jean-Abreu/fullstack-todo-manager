@@ -1,10 +1,13 @@
 {
   "name": "fullstack-todo-manager",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "pnpm --filter server dev",
+    "client": "pnpm --filter client dev",
+    "dev": "concurrently \"pnpm run server\" \"pnpm run client\""
   },
   "keywords": [],
   "author": "",
